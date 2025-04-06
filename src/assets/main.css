@@ -1,0 +1,78 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, rgba(224, 247, 250, 0.7), rgba(252, 228, 236, 0.7));
+  min-height: 100vh;
+  font-family: 'Nunito', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  transition: color 0.5s, background-color 0.5s;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 添加青粉色调的CSS变量 - 使用清淡的颜色 */
+:root {
+  --primary-light: rgba(224, 247, 250, 0.7);
+  --primary-dark: rgba(128, 222, 234, 0.7);
+  --accent-light: rgba(252, 228, 236, 0.7);
+  --accent-dark: rgba(248, 187, 208, 0.7);
+  --primary-gradient: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+  --accent-gradient: linear-gradient(135deg, rgba(128, 222, 234, 0.5), rgba(248, 187, 208, 0.5));
+  --button-gradient: linear-gradient(135deg, rgba(38, 198, 218, 0.8), rgba(236, 64, 122, 0.8));
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+}
+
+.el-menu-item, .el-submenu__title, .el-button, .el-dialog__title {
+  font-family: 'Nunito', 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+.logo-text, .category-title {
+  font-family: 'Playfair Display', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', serif;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
